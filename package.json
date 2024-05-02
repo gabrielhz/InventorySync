@@ -1,0 +1,8 @@
+{
+  "name": "InventorySync",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:gabrielhz/InventorySync.git",
+  "author": "gabrielhz <gabrielramoscardoso@hotmail.com>",
+  "license": "MIT"
+}
