@@ -1,10 +1,12 @@
 import { Entity } from './core/Entity'
+import { ItemProps } from './Item'
+import { ManufacturerProps } from './Manufacturer'
 
 interface AssetProps {
   assetCode: string
   status: string
-  item: string
-  manufacturer: string
+  item: ItemProps
+  manufacturer: ManufacturerProps
   description?: string
 }
 
