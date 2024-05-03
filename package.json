@@ -4,7 +4,10 @@
   "description": "InventorySync: A cutting-edge TypeScript project with a React frontend for seamless inventory management and synchronization.",
   "main": "src/server.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsx src/server.ts",
+    "dev": "tsx watch src/server.ts",
+    "build": "tsup src/server.ts"
   },
   "repository": {
     "type": "git",
@@ -25,7 +28,8 @@
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "prettier": "^3.2.5",
-    "ts-node-dev": "^2.0.0",
+    "tsup": "^8.0.2",
+    "tsx": "^4.8.2",
     "typescript": "^5.4.5"
   },
   "dependencies": {
