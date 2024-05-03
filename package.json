@@ -5,9 +5,9 @@
   "main": "src/server.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsx src/server.ts",
+    "start": "tsx src/interface.ts",
     "dev": "tsx watch src/server.ts",
-    "build": "tsup src/server.ts"
+    "build": "tsup src"
   },
   "repository": {
     "type": "git",
