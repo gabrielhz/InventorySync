@@ -5,6 +5,9 @@
   "repository": "git@github.com:gabrielhz/InventorySync.git",
   "author": "gabrielhz <gabrielramoscardoso@hotmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "tsnd --respawn --transpile-only --ignore-watch node_modules src/server.ts"
+  },
   "dependencies": {
     "express": "^4.19.2"
   },
