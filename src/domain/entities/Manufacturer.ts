@@ -4,7 +4,7 @@ export interface ManufacturerProps {
   name: string
 }
 
-class Manufacturer extends Entity<ManufacturerProps> {
+export class Manufacturer extends Entity<ManufacturerProps> {
   private constructor(props: ManufacturerProps, id?: string) {
     super(id, props)
   }
