@@ -16,4 +16,14 @@ export class User extends Entity<UserProps> {
 
     return user
   }
+
+  static example() {
+    const user = {
+      name: 'John Doe',
+      email: 'john@example.com',
+      password: 'password',
+    }
+    User.create(user)
+    return user
+  }
 }

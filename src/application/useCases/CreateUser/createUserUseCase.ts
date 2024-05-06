@@ -1,11 +1,7 @@
 import { User } from '../../../domain/entities/User'
 import { IUsersRepository } from '../../repositories/IUsersRepository'
+import { CreateUserRequest } from './CreateUserDTO'
 
-interface CreateUserRequest {
-  name: string
-  email: string
-  password: string
-}
 export class CreateUserUseCase {
   // eslint-disable-next-line no-useless-constructor
   constructor(private usersRepository: IUsersRepository) {}
