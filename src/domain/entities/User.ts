@@ -8,22 +8,19 @@ export interface UserProps {
 
 export class User extends Entity<UserProps> {
   private constructor(props: UserProps, id?: string) {
-    super(id, props)
+    super(props, id)
   }
 
   static create(props: UserProps, id?: string) {
-    const user = new User(props, id)
-
-    return user
+    return new User(props, id )
   }
-
-  static example() {
-    const user = {
-      name: 'John Doe',
-      email: 'john@example.com',
-      password: 'password',
-    }
-    User.create(user)
-    return user
+  static update(user: User, props: Partial<UserProps>): User {
+    return new User(
+      {
+        ...user.props,
+        ...props,
+      },
+      user.id
+    );
   }
 }

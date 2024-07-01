@@ -1,5 +1,5 @@
 export abstract class Entity<T> {
-  protected _id: string
+  public _id: string
   public createdAt: Date
   public props: T
 
@@ -7,7 +7,7 @@ export abstract class Entity<T> {
     return this._id
   }
 
-  constructor(id: string, props: T) {
+  constructor(props: T, id: string) {
     this.createdAt = new Date()
     this.props = props
     this._id = id ?? crypto.randomUUID()
