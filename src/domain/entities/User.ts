@@ -12,15 +12,16 @@ export class User extends Entity<UserProps> {
   }
 
   static create(props: UserProps, id?: string) {
-    return new User(props, id )
+    return new User(props, id)
   }
+
   static update(user: User, props: Partial<UserProps>): User {
     return new User(
       {
         ...user.props,
         ...props,
       },
-      user.id
-    );
+      user.id,
+    )
   }
 }

@@ -1,16 +1,16 @@
 import { User } from '../../../domain/entities/User'
 import { IUsersRepository } from '../IUsersRepository'
 
-export class SqlUsersRepository implements IUsersRepository {
+export class InMemoryUsers implements IUsersRepository {
   private _users: User[] = []
 
   get users() {
     return this._users
   }
 
-  async list(data?: string): Promise<User | User[]> {
+  async list(data?: User): Promise<User | User[]> {
     if (data) {
-      return await this.findById(data)
+      return await this.findById(data.id)
     }
     return this.users
   }
@@ -28,17 +28,17 @@ export class SqlUsersRepository implements IUsersRepository {
     return user
   }
 
-  async save(user: User): Promise<void> {
-    const userExist = await this.findById(user.id)
+  async save(data: User): Promise<void> {
+    const userExist = await this.findById(data.id)
 
     if (userExist) {
       const index = this.users.indexOf(userExist)
 
-      this.users.splice(index, 1, user)
+      this.users.splice(index, 1, data)
 
       return
     }
 
-    this.users.push(user)
+    this.users.push(data)
   }
 }

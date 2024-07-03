@@ -3,7 +3,6 @@ import { IUsersRepository } from '../../../repositories/IUsersRepository'
 import { CreateUserRequest } from './CreateUserDTO'
 
 export class CreateUserUseCase {
-  // eslint-disable-next-line no-useless-constructor
   constructor(private usersRepository: IUsersRepository) {}
 
   async execute(data: CreateUserRequest) {

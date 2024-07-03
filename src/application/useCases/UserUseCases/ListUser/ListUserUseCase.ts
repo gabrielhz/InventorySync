@@ -7,7 +7,8 @@ export class ListUserUseCase {
 
   async execute(data?: ListUserRequest) {
     if (data.id) {
-      return await this.usersRepository.list(data.id)
+      const user = await this.usersRepository.findById(data.id)
+      return await this.usersRepository.list(user)
     }
     return await this.usersRepository.list()
   }

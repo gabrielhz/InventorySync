@@ -1,3 +1,3 @@
-import { SqlUsersRepository } from "./application/repositories/implementations/SqlUsersRepository";
+import { InMemoryUsers } from './application/repositories/implementations/InMemoryUsers'
 
-export const inMemoryDB = new SqlUsersRepository()
+export const inMemoryDB = new InMemoryUsers()
